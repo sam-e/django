@@ -1,0 +1,14 @@
+<!-- the site header -->
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if title %}
+    <title>Django Blog - {{ title }}</title>
+  {% else %}
+    <title>Django Blog</title>
+  {% endif %}
+  <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+</head>

@@ -1,0 +1,27 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar>.container {
+        align-items: stretch;
+        display: flex;
+        min-height: 3.25rem;
+        width: 100%;
+    }
+    .navbar-burger {
+        display: none;
+    }
+    .navbar-menu {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        justify-content: flex-end;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+    .navbar, .navbar-end, .navbar-menu, .navbar-start {
+        display: flex;
+        align-items: stretch;
+    }
+    .navbar-item {
+        display: flex;
+        align-items: center;
+    }
+}

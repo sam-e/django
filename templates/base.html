@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<!-- get the html header - head.html -->
+{% include 'head.html' %}
+  <body>
+    <!-- get the Bulma navbar -navbar.html-->
+    {% include 'navbar.html' %}
+
+    <!-- the page content -->
+    {% block body %} {% endblock %}
+
+    <!-- the site footer-->
+    {% include 'footer.html' %}
+
+    <!-- JavaScript for the Bulma burger menu -->
+   <script src="{% static 'js/main.js' %}"></script>
+  </body>
+
+</html>
