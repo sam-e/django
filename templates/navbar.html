@@ -39,23 +39,23 @@
       <div class="navbar-item">
         <div class="field is-grouped">
           <p class="control">
-            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
+            {% if user.is_authenticated %}
+            <a class="bd-tw-button button" href="{% url 'logout' %}">
               <span class="icon">
-                <i class="fab fa-twitter"></i>
+                <i class="fas fa-sign-in-alt"></i>
               </span>
-              <span>
-                Tweet
-              </span>
+              <span>Log out</span>
             </a>
-          </p>
-          <p class="control">
-            <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
+            {% else %}
+            <a class="bd-tw-button button" href="{% url 'login' %}">
               <span class="icon">
-                <i class="fas fa-download"></i>
+                <i class="fas fa-sign-out-alt"></i>
               </span>
-              <span>Download</span>
+              <span>Log In</span>
             </a>
+            {% endif %}
           </p>
+
         </div>
       </div>
     </div>
